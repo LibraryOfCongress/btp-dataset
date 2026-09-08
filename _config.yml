@@ -48,7 +48,7 @@ sphinx:
   recursive_update: true
   config:
     html_theme_options:
-      repository_provider: https://git.loc.gov
+      repository_provider: "https://github.com"
     html_context:
       github_url: https://github.com/LibraryOfCongress
       github_repo: btp-dataset

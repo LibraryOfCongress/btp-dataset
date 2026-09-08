@@ -234,7 +234,6 @@ function sr_announce(message) {
 }
 
 function alter_code_button() {
-  console.log("looking for edit button");
   const editButton = document.querySelector(".btn-source-edit-button");
   if (editButton) {
     const currentHref = editButton.getAttribute("href");
@@ -246,12 +245,12 @@ function alter_code_button() {
 }
 
 function alter_repo_href() {
-  console.log("looking for repo button");
+  // Fix urls like "https://github.com/LibraryOfCongress//btp-dataset"
   const repoButton = document.querySelector(".btn-source-repository-button");
   if (repoButton) {
     const currentHref = repoButton.getAttribute("href");
     if (currentHref && currentHref.includes("//")) {
-      const newHref = currentHref.replaceAll("//", "/");
+      const newHref = currentHref.replace(/(https?:\/\/.*)\/\/(.*)/, "$1/$2");
       repoButton.setAttribute("href", newHref);
     }
   }
