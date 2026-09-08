@@ -1,0 +1,27 @@
+# Data at a Glance
+
+<div class="grid cards icons" markdown>
+
+<ul aria-label="Key facts about this data package">
+{% if total_records %}<li><i class="fa-solid fa-book-open icon total_records"></i><span class="datapoint">{{total_records}}</span><br/>records{% endif %}</li>
+{% if total_files %}<li><i class="fa-regular fa-file icon total_files"></i><span class="datapoint">{{total_files}}</span><br/>files{% endif %}</li>
+{% if has_images %}<li><i class="fa-solid fa-images icon has_images"></i>Includes<br/>images{% endif %}</li>
+{% if has_audio %}<li><i class="fa-solid fa-headphone icon has_audio"></i>Includes<br/>audio{% endif %}</li>
+{% if has_video %}<li><i class="fa-solid fa-video icon has_video"></i>Includes<br/>video{% endif %}</li>
+{% if has_webarchives %}<li><i class="fa-solid fa-globe icon has_webarchives"></i>Includes<br/>web archives{% endif %}</li>
+{% if has_transcriptions %}<li><i class="fa-solid fa-pen-nib icon has_transcriptions"></i>Includes<br/>transcripts{% endif %}</li>
+{% if has_metadata %}<li><i class="fa-solid fa-circle-info icon has_metadata"></i>Includes<br/>metadata{% endif %}</li>
+{% if is_dehydrated %}<li><i class="fa-solid fa-arrow-up-right-from-square icon has_metadata"></i>Points to<br/>{{dehydrated_types}}{% endif %}</li>
+{% if total_size %}<li><i class="fa-solid fa-weight-hanging icon total_size"></i><span class="datapoint">{{total_size}}<br>{{total_size_unit}}</span>{% endif %}</li>
+</ul>
+
+</div>
+
+{{description}}
+
+{{charts_html}}
+
+## Sample record
+
+
+{{sample}}

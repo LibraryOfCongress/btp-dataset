@@ -1,0 +1,42 @@
+h1 {
+  text-align: center;
+}
+
+.icon {
+  color: #000;
+}
+.icon.total_records,
+.icon.total_files {
+  color: #fc4c02;
+}
+.icon.total_size {
+  color: #666;
+}
+
+.grid.icons ul {
+  display: flex;
+  padding: 7em 0 5em;
+  margin: 1em 0;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 2em 0.5em;
+}
+.grid.icons .icon {
+  font-size: 2em;
+  display: block;
+  margin-bottom: 10px;
+  width: 36px;
+  margin: 0 auto;
+}
+
+.grid.icons li {
+  text-align: center;
+  padding: 0;
+  display: block;
+  width: 7em;
+}
+
+p.chart-data {
+  margin-bottom: 0;
+}

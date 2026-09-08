@@ -1,0 +1,26 @@
+# Ignore local gitignore
+.local_gitignore
+
+# Byte-compiled files
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Notebooks
+**/*.ipynb_checkpoints/
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+_build/.doctrees/*
+_build/jupyter_execute/*
+
+# Cached data
+outputs/*.pkl

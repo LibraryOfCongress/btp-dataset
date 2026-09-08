@@ -1,0 +1,12 @@
+format: jb-book
+root: 01_at_a_glance.md
+title: test
+parts:
+  - caption: ""
+    chapters:
+      - file: 02_about.md
+      - file: 03_download.md
+  - caption: Tutorial
+    chapters:
+      - file: tutorial/01_introduction.md
+      - file: tutorial/02_visualizing_sentiment.ipynb

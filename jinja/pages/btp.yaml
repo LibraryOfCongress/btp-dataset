@@ -1,0 +1,123 @@
+template: ./jinja/templates/at_a_glance_template.md.j2
+output: ./01_at_a_glance.md
+dataset_name: "By the People Comprehensive Transcription Data Package"
+description: "The **By the People Comprehensive Transcription Data Package** provides access to Library of Congress digital pages transcribed by public volunteers, through the Library of Congress’s [By the People](https://crowd.loc.gov/) crowdsourced transcription program. The dataset combines full text transcripts from contributors, tags from contributors, selected metadata fields from Library of Congress staff, and URL pointers to download images as [IIIF](https://www.loc.gov/apis/micro-services/image-services/) JPEG, JP2, and/or TIFF. Read more about the data at {doc}`02_about`. Info about downloading the data is at {doc}`03_download`."
+total_records: "425,077"
+total_files: "73"
+total_size: "3.0"
+total_size_unit: "GB"
+has_metadata: True
+has_images: False
+has_transcriptions: True
+has_audio: False
+has_video: False
+has_webarchives: False
+is_dehydrated: True
+dehydrated_types: "images"
+charts:
+  - title: "Campaigns by page count"
+    aria-label: "Raw data CSV, Campaigns by page count"
+    type: bar_horizontal
+    chart_data: ./_static/data/btp_agg_bar_h_document_count_by_campaign.csv
+    width:
+    height: 1500
+  - title: "Original Format by page count"
+    aria-label: "Raw data CSV, Original Format by page count"
+    subtitle: "Values are from the dataset's `OriginalFormat` field, which is a multi-value field."
+    type: bar_horizontal
+    chart_data: ./_static/data/btp_agg_original_format.csv
+    width:
+    height: 260
+  - title: "Distribution of pages by word count"
+    aria-label: "Raw data CSV, Distribution of pages by word count"
+    type: bar_vertical
+    chart_data: ./_static/data/btp_agg_vbar_words_per_doc.csv
+    width:
+    height: 380
+  - title: "Campaigns by total unique word count"
+    aria-label: "Raw data CSV, Campaigns by total unique word count"
+    subtitle: 'Uniqueness is determined by word root. Words like "running", "ran", "runs" are considered the same word.'
+    type: bar_horizontal
+    chart_data: ./_static/data/btp_agg_bar_h_word_count_by_campaign.csv
+    width:
+    height: 1400
+  - title: "Top 20 Contributors"
+    aria-label: "Raw data CSV, Top 20 Contributors"
+    subtitle: "Values are from the dataset's `Contributor` field, which is a multi-value field. Ordered by page count."
+    type: bar_horizontal
+    chart_data: ./_static/data/btp_agg_top_contributors.csv
+    width:
+    height: 900
+  - title: "Page count by image format"
+    subtitle: "Each page may have up to three formats available: JPEG, JP2, TIFF."
+    aria-label: "Raw data CSV, Image formats counts"
+    type: bar_horizontal
+    chart_data: ./_static/data/btp_agg_image_formats.csv
+    width:
+    height: 190
+sample: |
+  ### JSON metadata and transcript
+
+  Available as:
+  - CSV
+  - JSON (shown here)
+  - Parquet
+
+  ```json
+  {
+      "Campaign": "Theater for the People: Federal Theatre Project playbills",
+      "Project": "The Mid-Atlantic",
+      "Item": "The Thirteenth Chair",
+      "ItemId": "musftpplaybills.200221949",
+      "Asset": "musftpplaybills.200221949-2",
+      "AssetId": "779961",
+      "AssetStatus": "completed",
+      "DownloadUrl": "https://tile.loc.gov/image-services/iiif/public:music:musftpplaybills-200221949:musftpplaybills-200221949.0002/full/pct:100/0/default.jpg",
+      "Transcription": "Appreciation\r\n\r\nTo our Associate Officers, Comrades,\r\nMembers of Committees, Advertisers, Patrons,\r\nand all the others who have contributed\r\nto the success of this affair, we extend our \r\nsincere appreciation.\r\n\r\nEntertainment Committee.\r\n\r\nOfficers\r\n\r\nJames J. Murray, Commander\r\nW.J. Lynch, Vice-Commander\r\nJ. Pascucci, Vice Commander\r\nE.E. Bryant, Adjutant\r\nO. Thamsen, Finance Officer\r\nA.R. Golden, Chaplain \r\nRobert Bussow, Serg't-at-Arms\r\nA.L. Eberle, Historian\r\n\r\n",
+      "Tags": [],
+      "DatasetId": "2023514920",
+      "SourceDatasetFilename": "federal-theatre-project_2026-03-03.csv",
+      "RightsAdvisory": "Statement from source dataset: The text in this dataset was created by volunteers and can be used in many different ways. Some of the contents of this dataset may be subject to copyright protection. Consult the digital collection at https://www.loc.gov/collections/federal-theatre-project-1935-to-1939/about-this-collection/rights-and-access/ for more information on rights and access restrictions.",
+      "TIFF": null,
+      "JP2": "https://tile.loc.gov/storage-services/public/music/musftpplaybills-200221949/musftpplaybills-200221949.0002.jp2",
+      "SegmentUrl": "https://www.loc.gov/resource/music.musftpplaybills-200221949/?sp=2",
+      "ResourceUrl": "https://www.loc.gov/resource/music.musftpplaybills-200221949/",
+      "SubjectHeadings": [
+          "Theater--United States",
+          "Playbill"
+      ],
+      "ContributorNames": [
+          "Federal Theatre Project (U.S.)",
+          "Ford, Frank",
+          "Veiller, Bayard"
+      ],
+      "OriginalFormat": [
+          "book"
+      ],
+      "Medium": [
+          "Playbill: 40p.: 6 in. x 9 in."
+      ],
+      "CallNumber": [
+          "series: Production Records, 1934-1943: Programs File, 1934-1939"
+      ],
+      "Repository": [
+          "music division"
+      ],
+      "Notes": null
+  }
+
+  ```
+
+  ### Image
+
+  The dataset includes pointers to images in the following formats (when available):
+  - [IIIF](https://www.loc.gov/apis/micro-services/image-services/) JPEG (embedded here at 12.5% size)
+  - JP2 (JPEG2000)
+  - TIFF
+
+
+  :::{note}
+  Occassionally, an image may not be available for a page, or may only be available in certain formats.  
+  :::
+
+  ![IIIF JPEG image from the DownloadURL field, showing the sample page](https://tile.loc.gov/image-services/iiif/public:music:musftpplaybills-200221949:musftpplaybills-200221949.0002/full/pct:12.5/0/default.jpg)
